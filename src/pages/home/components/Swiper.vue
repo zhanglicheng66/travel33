@@ -21,7 +21,7 @@
            return {
                swiperOption:{
                    pagination:'.swiper-pagination',
-                   loop:true
+                   loop:1
                },
                swiperList:[{
                    id:'0001',
