@@ -1,6 +1,6 @@
 <template>
     <div class="icons">
-        <swiper>
+        <swiper :options="swiperOption">
             <swiper-slide v-for="(page,index) in pages" :key='index'>
                 <div class="icon" v-for="item in page" :key="item.id">
                     <div class="icon-img">
@@ -18,8 +18,14 @@
 <script>
     export default {
         name:'HomeIcons',
+        props:{
+            list:Array
+        },
         data(){
             return {
+                swiperOption:{
+                    autoplay:false
+                },
                 iconList :[{
                     id:'001',
                     imgUrl:'https://gw.alicdn.com/tfs/TB1Wxi2trsrBKNjSZFpXXcXhFXa-183-144.png_.webp',
@@ -62,7 +68,7 @@
         computed:{
             pages(){
                 const pages = []
-                this.iconList.forEach((item,index)=>{
+                this.list.forEach((item,index)=>{
                     const page = Math.floor(index/8)
                      if(!pages[page]){
                          pages[page]=[]
