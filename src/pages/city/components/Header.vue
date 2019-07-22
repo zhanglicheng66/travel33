@@ -14,7 +14,8 @@
 </script>
 
 <style lang="stylus" scoped>
-    @import '~styles/varibles.styl'
+    @import '~@/assets/styles/varibles.styl' 
+    @import '~@/assets/styles/mixins.styl'
     .header
         position :relative
 

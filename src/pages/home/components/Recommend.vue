@@ -46,7 +46,8 @@
 </script>
 
 <style lang="stylus" scoped>
-    @import '~styles/mixins.styl'
+@import '~@/assets/styles/varibles.styl' 
+    @import '~@/assets/styles/mixins.styl'
     .title
         margin-top:0.2rem
         line-height:0.8rem 
